@@ -1,0 +1,17 @@
+{%extends "blog/base.html"%}
+
+{%block title%}Estudando Django Blog {%endblock%}
+
+{%block content%}
+
+{%for post in post_list%}
+
+<h2>
+    <a href="{{post.get_absolute_url}}">
+    {{post.title}}
+    </a>
+</h2>
+
+{%endfor%}
+
+{%endblock%}
